@@ -18,8 +18,6 @@ let allTimeHighScoreSpan;
 let highScore = 0;
 
 let ana;
-let bgI;
-let bgX;
 
 // Training or just showing the current best
 let runBest = false;
@@ -66,7 +64,7 @@ function toggleState() {
 
 
 function draw() {
-  background(bgI);
+  background(0);
   
   // Should we speed up cycles per frame
   let cycles = speedSlider.value();
