@@ -17,16 +17,10 @@ let allTimeHighScoreSpan;
 // All time high score
 let highScore = 0;
 
-let ana;
-
 // Training or just showing the current best
 let runBest = false;
 let runBestButton;
 
-function preload() {
-  ana = loadImage('gra2/ana.png');
-  bgI = loadImage('gra2/eru.png');
-} 
 function setup() {
   let canvas = createCanvas(600, 400);
   canvas.parent('canvascontainer');
@@ -65,7 +59,7 @@ function toggleState() {
 
 function draw() {
   background(0);
-  
+
   // Should we speed up cycles per frame
   let cycles = speedSlider.value();
   speedSpan.html(cycles);
