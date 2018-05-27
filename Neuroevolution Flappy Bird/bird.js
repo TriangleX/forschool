@@ -14,6 +14,8 @@ class Bird {
     this.x = 64;
     this.y = height / 2;
     this.r = 12;
+    
+    this.skin = ana;
 
     // Gravity, lift and velocity
     this.gravity = 0.8;
@@ -42,9 +44,10 @@ class Bird {
 
   // Display the bird
   show() {
-    fill(255, 100);
-    stroke(255);
-    ellipse(this.x, this.y, this.r * 2, this.r * 2);
+    image(this.skin, this.x, this.y, this.r * 2, this.r * 2);
+//     fill(255, 100);
+//     stroke(255);
+//     ellipse(this.x, this.y, this.r * 2, this.r * 2);
   }
 
   // This is the key function now that decides
