@@ -66,17 +66,7 @@ function toggleState() {
 
 
 function draw() {
-  background(0);
-  
-  bgX -= pipes[0].speed * parallax;
-  image(bgImg, bgX, 0, bgImg.width, height);
-  
-  if (bgX <= -bgImg.width + width) {
-    image(bgImg, bgX + bgImg.width, 0, bgImg.width, height);
-    if (bgX <= -bgImg.width) {
-      bgX = 0;
-    }
-  }
+  background(bgI);
   
   // Should we speed up cycles per frame
   let cycles = speedSlider.value();
