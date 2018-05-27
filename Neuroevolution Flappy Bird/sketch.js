@@ -18,6 +18,8 @@ let allTimeHighScoreSpan;
 let highScore = 0;
 
 let ana;
+let bgI;
+let bgX;
 
 // Training or just showing the current best
 let runBest = false;
@@ -25,6 +27,7 @@ let runBestButton;
 
 function preload() {
   ana = loadImage('gra2/ana.png');
+  bgI = loadImage('gra2/eru.png');
 } 
 function setup() {
   let canvas = createCanvas(600, 400);
@@ -64,7 +67,17 @@ function toggleState() {
 
 function draw() {
   background(0);
-
+  
+  bgX -= pipes[0].speed * parallax;
+  image(bgImg, bgX, 0, bgImg.width, height);
+  
+  if (bgX <= -bgImg.width + width) {
+    image(bgImg, bgX + bgImg.width, 0, bgImg.width, height);
+    if (bgX <= -bgImg.width) {
+      bgX = 0;
+    }
+  }
+  
   // Should we speed up cycles per frame
   let cycles = speedSlider.value();
   speedSpan.html(cycles);
