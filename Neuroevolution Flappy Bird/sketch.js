@@ -17,10 +17,15 @@ let allTimeHighScoreSpan;
 // All time high score
 let highScore = 0;
 
+let ana;
+
 // Training or just showing the current best
 let runBest = false;
 let runBestButton;
 
+function preload() {
+  ana = loadImage('gra/ana.png');
+} 
 function setup() {
   let canvas = createCanvas(600, 400);
   canvas.parent('canvascontainer');
