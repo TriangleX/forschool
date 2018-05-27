@@ -24,7 +24,7 @@ let runBest = false;
 let runBestButton;
 
 function preload() {
-  ana = loadImage('gra/ana.png');
+  ana = loadImage('gra2/ana.png');
 } 
 function setup() {
   let canvas = createCanvas(600, 400);
